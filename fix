@@ -1,0 +1,16 @@
+see package libstdc++
+
+dpkg -l | grep libstd
+ii  libstdc++6:amd64                                            4.7.2-2ubuntu1                             amd64        GNU Standard C++ Library v3
+ii  libstdc++6:i386                                             4.7.2-2ubuntu1                             i386         GNU Standard C++ Library v3
+ii  libstdc++6-4.7-dev                                          4.7.2-2ubuntu1                             amd64        GNU Standard C++ Library v3 (development files)
+
+then link for ld
+
+ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17 /usr/lib/libstdc++.so
+
+
+Fixing the make file
+PHPINC += /usr/include/php5/
+SWIG += /usr/bin/swig
+
